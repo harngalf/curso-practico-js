@@ -8,6 +8,12 @@ Curso Practico de JavaScript con Pllatzi 💚
 - Primer paso: definir las fórmulas.
 - Segundo paso: Implermentar las fórmulas en JS.
 - Tercero paso: Crear funciones.
-- Cuarto paso: Integrar js con html.
+- Cuarto paso: Integrar js con HTML.
 
 
+## Taller #2: Porcentajes y descuentos.
+
+- Primer paso: definir las fórmulas.
+- Segundo paso: Implermentar las fórmulas en JS.
+- Tercero paso: Crear funciones.
+- Cuarto paso: Integrar js con HTML.

@@ -19,30 +19,35 @@ function onClickButtonPriceDescount(){
 
     let descuento;
 
-    switch(cuponValue) {
-        case cupons[0]: //FREE
-            descuento = Number(15);
-        break;    
-        case cupons[1]: //MEDIUM
-            descuento = Number(25);
-        break;
-        case cupons[2]: //HIGH
-            descuento = Number(30);
-        break;
-    };
+   
     console.log(descuento);
 
-    const precioConDescuento = calcularPrecioConDescuento(priceValue, descuento);
-     console.log(precioConDescuento);
+    if (!cupons.includes(cuponValue)) {
+        alert("El Cupón -" + cuponValue + "- NO es Valido" );
+    }
+    else {
 
-    const resultP = document.getElementById("resultPrice");
-    const resultB = document.getElementById("resultBlack");
+        switch(cuponValue) {
+            case cupons[0]: //FREE
+                descuento = Number(15);
+            break;    
+            case cupons[1]: //MEDIUM
+                descuento = Number(25);
+            break;
+            case cupons[2]: //HIGH
+                descuento = Number(30);
+            break;
+        };
 
-    
+        const precioConDescuento = calcularPrecioConDescuento(priceValue, descuento);
+        console.log(precioConDescuento);
 
-    resultP.innerText = "El precio con descuento es de: "; 
-    resultB.innerText = "$ " + precioConDescuento + " pesos (MXP)";
+        const resultP = document.getElementById("resultPrice");
+        const resultB = document.getElementById("resultBlack");
 
+        resultP.innerText = "El precio con descuento es de: "; 
+        resultB.innerText = "$ " + precioConDescuento + " pesos (MXP)";
+    };
 };
 
 

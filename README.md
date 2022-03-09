@@ -3,7 +3,7 @@ Curso Practico de JavaScript con Pllatzi 💚
 
 ...
 
-## Talle #1: Figuras Geométricas
+## Taller #1: Figuras Geométricas
 
 - Primer paso: definir las fórmulas.
 - Segundo paso: Implermentar las fórmulas en JS.

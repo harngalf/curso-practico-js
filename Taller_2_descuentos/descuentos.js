@@ -1,3 +1,8 @@
+const cupons = [
+    "FREE",
+    "MEDIUM",
+    "HIGH"
+];
 
 function calcularPrecioConDescuento(precio, descuento){
     const porcentajePrecioConDescuento = 100 - descuento;
@@ -7,20 +12,43 @@ function calcularPrecioConDescuento(precio, descuento){
 
 function onClickButtonPriceDescount(){
     const inputPrice = document.getElementById("inputPrice");
-    const priceValue = inputPrice.value;
-    const inputDiscount = document.getElementById("inputDiscount");
-    const discountValue = inputDiscount.value;
+    const priceValue = Number(inputPrice.value);
+    console.log(priceValue);
+    const inputCpn = document.getElementById("inputCupon");
+    const cuponValue = inputCpn.value;
 
-    const precioConDescuento = calcularPrecioConDescuento(priceValue, discountValue);
+    let descuento;
 
-    const resultP = document.getElementById("resultPrice");
-    const resultB = document.getElementById("resultBlack");
+   
+    console.log(descuento);
 
-    resultP.innerText = "El precio con descuento es de: "; 
-    resultB.innerText = "$ " + precioConDescuento + " pesos (MXP)";
+    if (!cupons.includes(cuponValue)) {
+        alert("El Cupón -" + cuponValue + "- NO es Valido" );
+    }
+    else {
 
+        switch(cuponValue) {
+            case cupons[0]: //FREE
+                descuento = Number(15);
+            break;    
+            case cupons[1]: //MEDIUM
+                descuento = Number(25);
+            break;
+            case cupons[2]: //HIGH
+                descuento = Number(30);
+            break;
+        };
+
+        const precioConDescuento = calcularPrecioConDescuento(priceValue, descuento);
+        console.log(precioConDescuento);
+
+        const resultP = document.getElementById("resultPrice");
+        const resultB = document.getElementById("resultBlack");
+
+        resultP.innerText = "El precio con descuento es de: "; 
+        resultB.innerText = "$ " + precioConDescuento + " pesos (MXP)";
+    };
 };
-
 
 
 
